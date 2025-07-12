@@ -37,17 +37,6 @@ const Experience = () => {
   const education = [
     {
       id: 1,
-      school: 'Osaka City University',
-      degree: 'Bachelor of Arts, majoring Sociology',
-      period: '2016年4月 - 2020年3月',
-      description: 'Social research and data analysis',
-      achievements: [
-        '卒業研究で機械学習を用いた画像認識システムを開発',
-        'プログラミングコンテストで優秀賞を受賞'
-      ]
-    },
-    {
-      id: 2,
       school: 'Queensland University of Technology (QUT)',
       degree: 'Master of Information Technology, majoring Computer Science',
       period: '2024年2月 - Present',
@@ -58,41 +47,55 @@ const Experience = () => {
       ]
     },
     {
-      id: 3,
+      id: 2,
       school: 'Java Programming Job Training',
+      //degree: 'Java Programming Job Training',
       period: '2022年7月 - Oct 2022',
       description: 'Intensive Java development training program',
       achievements: [
         '卒業研究で機械学習を用いた画像認識システムを開発',
         'プログラミングコンテストで優秀賞を受賞'
       ]
-    }
-  ]
-
-  // 資格データ
-  const certifications = [
-    {
-      id: 1,
-      name: 'AWS認定ソリューションアーキテクト',
-      issuer: 'Amazon Web Services',
-      date: '2023年6月',
-      description: 'クラウドインフラの設計・運用に関する資格'
-    },
-    {
-      id: 2,
-      name: '応用情報技術者',
-      issuer: 'IPA',
-      date: '2021年10月',
-      description: 'ITエンジニアとしての基礎知識を証明する国家資格'
     },
     {
       id: 3,
-      name: 'TOEIC 850点',
-      issuer: 'ETS',
-      date: '2022年3月',
-      description: 'ビジネス英語能力を証明する国際資格'
-    }
+      school: 'Osaka City University',
+      degree: 'Bachelor of Arts, majoring Sociology',
+      period: '2016年4月 - 2020年3月',
+      description: 'Social research and data analysis',
+      achievements: [
+        '卒業研究で機械学習を用いた画像認識システムを開発',
+        'プログラミングコンテストで優秀賞を受賞'
+      ]
+    },
+    
+    
   ]
+
+  // 資格データ
+  // const certifications = [
+  //   {
+  //     id: 1,
+  //     name: 'AWS認定ソリューションアーキテクト',
+  //     issuer: 'Amazon Web Services',
+  //     date: '2023年6月',
+  //     description: 'クラウドインフラの設計・運用に関する資格'
+  //   },
+  //   {
+  //     id: 2,
+  //     name: '応用情報技術者',
+  //     issuer: 'IPA',
+  //     date: '2021年10月',
+  //     description: 'ITエンジニアとしての基礎知識を証明する国家資格'
+  //   },
+  //   {
+  //     id: 3,
+  //     name: 'TOEIC 850点',
+  //     issuer: 'ETS',
+  //     date: '2022年3月',
+  //     description: 'ビジネス英語能力を証明する国際資格'
+  //   }
+  // ]
 
   return (
     <section id="experience" className="section-padding bg-gradient-secondary">
@@ -185,14 +188,14 @@ const Experience = () => {
             <div>
               <h3 className="text-2xl font-bold text-secondary-900 mb-8 flex items-center">
                 <span className="w-8 h-8 bg-secondary-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">E</span>
-                学歴
+                EDUCATION
               </h3>
               <div className="space-y-6">
                 {education.map((edu) => (
                   <div key={edu.id} className="card hover:shadow-2xl transition-all duration-300">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                       <h4 className="text-lg font-bold text-secondary-900">
-                        {edu.degree}
+                        {edu.school}
                       </h4>
                       <span className="text-sm text-secondary-600 font-medium bg-secondary-50 px-3 py-1 rounded-full">
                         {edu.period}
@@ -200,7 +203,7 @@ const Experience = () => {
                     </div>
                     
                     <h5 className="text-secondary-600 font-semibold mb-2">
-                      {edu.school}
+                      {edu.degree}
                     </h5>
                     
                     <p className="text-secondary-600 mb-4">
@@ -228,7 +231,7 @@ const Experience = () => {
             </div>
 
             {/* 資格 */}
-            <div>
+            {/* <div>
               <h3 className="text-2xl font-bold text-secondary-900 mb-8 flex items-center">
                 <span className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">C</span>
                 資格
@@ -255,7 +258,7 @@ const Experience = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

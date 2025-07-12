@@ -73,13 +73,13 @@ const Projects = () => {
     }
   ]
 
-  const categories = [
-    { id: 'all', name: 'すべて' },
-    { id: 'web', name: 'Webアプリ' },
-    { id: 'mobile', name: 'モバイルアプリ' },
-    { id: 'data', name: 'データ分析' },
-    { id: 'api', name: 'API開発' }
-  ]
+  // const categories = [
+  //   { id: 'all', name: 'すべて' },
+  //   { id: 'web', name: 'Webアプリ' },
+  //   { id: 'mobile', name: 'モバイルアプリ' },
+  //   { id: 'data', name: 'データ分析' },
+  //   { id: 'api', name: 'API開発' }
+  // ]
 
   const filteredProjects = activeFilter === 'all' 
     ? projects 
@@ -98,7 +98,7 @@ const Projects = () => {
         </div>
 
         {/* フィルター */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        {/* <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
             <button
               key={category.id}
@@ -112,7 +112,7 @@ const Projects = () => {
               {category.name}
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* プロジェクトグリッド */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
