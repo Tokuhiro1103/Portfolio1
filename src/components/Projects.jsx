@@ -5,64 +5,64 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'ECサイト',
-      description: 'ReactとNode.jsを使用したフルスタックECサイト。ユーザー認証、商品管理、決済機能を実装。',
+      title: 'TPro application',
+      description: 'This is a team project. We developed an iOS application with Swift and I implemented BLE connection functionality.',
       image: '/project1.jpg',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      technologies: ['Swift', 'BLE', 'CoreBluetooth'],
       github: 'https://github.com/yourusername/project1',
       demo: 'https://project1-demo.com',
       featured: true
     },
     {
       id: 2,
-      title: 'タスク管理アプリ',
-      description: 'Vue.jsとFirebaseを使用したリアルタイムタスク管理アプリケーション。あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ',
+      title: 'API Development',
+      description: 'Implemented a RESTful API and front-end for a web application and implemented a web application',
       image: '/project2.jpg',
-      technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
+      technologies: ['Javascript', 'React.js', 'ReactNative', 'Node.js', 'Express', 'MongoDB', 'Expo'],
       github: 'https://github.com/yourusername/project2',
       demo: 'https://project2-demo.com',
       featured: true
     },
     {
       id: 3,
-      title: 'モバイルアプリ',
-      description: 'React Nativeを使用したクロスプラットフォームモバイルアプリ。',
+      title: 'Notakto',
+      description: 'This is a board game app. I implemented the game logic: Save, Redo, Undo',
       image: '/project3.jpg',
-      technologies: ['React Native', 'Expo', 'Redux'],
+      technologies: ['C#'],
       github: 'https://github.com/yourusername/project3',
       demo: null,
       featured: false
     },
     {
       id: 4,
-      title: 'データ分析ダッシュボード',
-      description: 'PythonとDjangoを使用したデータ可視化ダッシュボード。',
+      title: 'EC site',
+      description: 'Developed an e-commerce website with Python, Flask and Bootstrap',
       image: '/project4.jpg',
-      technologies: ['Python', 'Django', 'Chart.js', 'PostgreSQL'],
+      technologies: ['Python', 'Flask', 'Bootstrap'],
       github: 'https://github.com/yourusername/project4',
       demo: 'https://project4-demo.com',
       featured: false
     },
     {
       id: 5,
-      title: 'ポートフォリオサイト',
-      description: 'このポートフォリオサイト自体です。ReactとTailwind CSSで作成。',
+      title: 'Portfolio site',
+      description: 'This site. Used React and Tailwind CSS',
       image: '/project5.jpg',
-      technologies: ['React', 'Tailwind CSS', 'Vite'],
+      technologies: ['React.js', 'Tailwind CSS', 'Vite'],
       github: 'https://github.com/yourusername/portfolio',
       demo: 'https://your-portfolio.com',
       featured: false
     },
-    {
-      id: 6,
-      title: 'API開発',
-      description: 'RESTful APIの設計と実装。認証、レート制限、ドキュメント化を含む。',
-      image: '/project6.jpg',
-      technologies: ['Node.js', 'Express', 'JWT', 'Swagger'],
-      github: 'https://github.com/yourusername/api-project',
-      demo: 'https://api-docs.com',
-      featured: false
-    }
+    // {
+    //   id: 6,
+    //   title: 'API開発',
+    //   description: 'RESTful APIの設計と実装。認証、レート制限、ドキュメント化を含む。',
+    //   image: '/project6.jpg',
+    //   technologies: ['Node.js', 'Express', 'JWT', 'Swagger'],
+    //   github: 'https://github.com/yourusername/api-project',
+    //   demo: 'https://api-docs.com',
+    //   featured: false
+    // }
   ]
 
   return (
