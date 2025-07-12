@@ -1,16 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState('all')
-
   // プロジェクトデータ - ここを編集してあなたのプロジェクトに変更してください
   const projects = [
     {
       id: 1,
       title: 'ECサイト',
       description: 'ReactとNode.jsを使用したフルスタックECサイト。ユーザー認証、商品管理、決済機能を実装。',
-      image: '/project1.jpg', // プロジェクト画像のパス
-      category: 'web',
+      image: '/project1.jpg',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       github: 'https://github.com/yourusername/project1',
       demo: 'https://project1-demo.com',
@@ -19,9 +16,8 @@ const Projects = () => {
     {
       id: 2,
       title: 'タスク管理アプリ',
-      description: 'Vue.jsとFirebaseを使用したリアルタイムタスク管理アプリケーション。',
+      description: 'Vue.jsとFirebaseを使用したリアルタイムタスク管理アプリケーション。あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ',
       image: '/project2.jpg',
-      category: 'web',
       technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
       github: 'https://github.com/yourusername/project2',
       demo: 'https://project2-demo.com',
@@ -32,7 +28,6 @@ const Projects = () => {
       title: 'モバイルアプリ',
       description: 'React Nativeを使用したクロスプラットフォームモバイルアプリ。',
       image: '/project3.jpg',
-      category: 'mobile',
       technologies: ['React Native', 'Expo', 'Redux'],
       github: 'https://github.com/yourusername/project3',
       demo: null,
@@ -43,7 +38,6 @@ const Projects = () => {
       title: 'データ分析ダッシュボード',
       description: 'PythonとDjangoを使用したデータ可視化ダッシュボード。',
       image: '/project4.jpg',
-      category: 'data',
       technologies: ['Python', 'Django', 'Chart.js', 'PostgreSQL'],
       github: 'https://github.com/yourusername/project4',
       demo: 'https://project4-demo.com',
@@ -54,7 +48,6 @@ const Projects = () => {
       title: 'ポートフォリオサイト',
       description: 'このポートフォリオサイト自体です。ReactとTailwind CSSで作成。',
       image: '/project5.jpg',
-      category: 'web',
       technologies: ['React', 'Tailwind CSS', 'Vite'],
       github: 'https://github.com/yourusername/portfolio',
       demo: 'https://your-portfolio.com',
@@ -65,25 +58,12 @@ const Projects = () => {
       title: 'API開発',
       description: 'RESTful APIの設計と実装。認証、レート制限、ドキュメント化を含む。',
       image: '/project6.jpg',
-      category: 'api',
       technologies: ['Node.js', 'Express', 'JWT', 'Swagger'],
       github: 'https://github.com/yourusername/api-project',
       demo: 'https://api-docs.com',
       featured: false
     }
   ]
-
-  // const categories = [
-  //   { id: 'all', name: 'すべて' },
-  //   { id: 'web', name: 'Webアプリ' },
-  //   { id: 'mobile', name: 'モバイルアプリ' },
-  //   { id: 'data', name: 'データ分析' },
-  //   { id: 'api', name: 'API開発' }
-  // ]
-
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter)
 
   return (
     <section id="projects" className="section-padding bg-white">
@@ -97,26 +77,9 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* フィルター */}
-        {/* <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveFilter(category.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
-                activeFilter === category.id
-                  ? 'bg-primary-600 text-white shadow-lg transform scale-105'
-                  : 'bg-gray-100 text-secondary-700 hover:bg-gray-200 hover:shadow-md'
-              }`}
-            >
-              {category.name}
-            </button>
-          ))}
-        </div> */}
-
         {/* プロジェクトグリッド */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
+          {projects.map((project) => (
             <div key={project.id} className="group">
               <div className="card h-full hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 {/* プロジェクト画像 */}
