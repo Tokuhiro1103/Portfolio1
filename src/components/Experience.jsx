@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Experience = () => {
   // 経歴データ - ここを編集してあなたの経歴に変更してください
@@ -256,6 +257,11 @@ const Experience = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* 自己紹介ページへのボタン */}
+        <div className="text-center mt-12">
+          <Link to="/about" className="btn-secondary inline-block">自己紹介を見る</Link>
         </div>
       </div>
     </section>

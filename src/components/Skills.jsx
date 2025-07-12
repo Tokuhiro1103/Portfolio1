@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Skills = () => {
   // スキルデータ - ここを編集してあなたのスキルに変更してください
@@ -157,6 +158,11 @@ const Skills = () => {
               <p className="text-sm text-secondary-600">ビジネスレベル</p>
             </div>
           </div>
+        </div>
+
+        {/* 自己紹介ページへのボタン */}
+        <div className="text-center mt-12">
+          <Link to="/about" className="btn-secondary inline-block">自己紹介を見る</Link>
         </div>
       </div>
     </section>
