@@ -11,7 +11,6 @@ const Projects = () => {
       image: '/image_Tpro1.jpg',
       technologies: ['Swift', 'BLE', 'CoreBluetooth'],
       github: 'https://github.com/yourusername/project1',
-      demo: 'https://project1-demo.com',
       featured: true
     },
     {
@@ -21,7 +20,6 @@ const Projects = () => {
       image: '/image_API1.png',
       technologies: ['Javascript', 'React.js', 'ReactNative', 'Node.js', 'Express', 'MongoDB', 'Expo'],
       github: 'https://github.com/yourusername/project2',
-      demo: 'https://project2-demo.com',
       featured: true
     },
     {
@@ -31,7 +29,6 @@ const Projects = () => {
       image: '/image_notakuto2.png',
       technologies: ['C#'],
       github: 'https://github.com/yourusername/project3',
-      demo: null,
       featured: false
     },
     {
@@ -41,7 +38,6 @@ const Projects = () => {
       image: '/image_ECsite1.png',
       technologies: ['Python', 'Flask', 'Bootstrap'],
       github: 'https://github.com/yourusername/project4',
-      demo: 'https://project4-demo.com',
       featured: false
     },
     {
@@ -51,19 +47,8 @@ const Projects = () => {
       image: '/project5.jpg',
       technologies: ['React.js', 'Tailwind CSS', 'Vite'],
       github: 'https://github.com/yourusername/portfolio',
-      demo: 'https://your-portfolio.com',
       featured: false
     },
-    // {
-    //   id: 6,
-    //   title: 'API開発',
-    //   description: 'RESTful APIの設計と実装。認証、レート制限、ドキュメント化を含む。',
-    //   image: '/project6.jpg',
-    //   technologies: ['Node.js', 'Express', 'JWT', 'Swagger'],
-    //   github: 'https://github.com/yourusername/api-project',
-    //   demo: 'https://api-docs.com',
-    //   featured: false
-    // }
   ]
 
   return (
@@ -105,18 +90,14 @@ const Projects = () => {
                           </svg>
                         </a>
                       )}
-                      {project.demo && (
-                        <a
-                          href={project.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-white text-gray-800 p-3 rounded-full hover:bg-gray-100 transition-all duration-200 transform hover:scale-110 shadow-lg"
-                        >
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                          </svg>
-                        </a>
-                      )}
+                      <Link
+                        to={`/projects/${project.id}`}
+                        className="bg-white text-gray-800 p-3 rounded-full hover:bg-gray-100 transition-all duration-200 transform hover:scale-110 shadow-lg"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -129,7 +110,6 @@ const Projects = () => {
                   <p className="text-secondary-600 mb-4">
                     {project.description}
                   </p>
-                  
                   {/* 使用技術 */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech) => (
@@ -141,7 +121,6 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-
                   {/* リンク */}
                   <div className="flex space-x-4">
                     {project.github && (
