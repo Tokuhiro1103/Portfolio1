@@ -58,9 +58,9 @@ const Projects = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
             Projects
           </h2>
-          <p className="text-secondary-600 text-lg max-w-2xl mx-auto">
+          {/* <p className="text-secondary-600 text-lg max-w-2xl mx-auto">
             私が開発したプロジェクトの一部をご紹介します
-          </p>
+          </p> */}
         </div>
 
         {/* プロジェクトグリッド */}
@@ -152,7 +152,7 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* その他のプロジェクトへのリンク */}
+        {/* その他のプロジェクトへのリンク
         <div className="text-center mt-12">
           <p className="text-secondary-600 mb-4">
             より多くのプロジェクトをご覧になりたい方は
@@ -168,7 +168,7 @@ const Projects = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   )
