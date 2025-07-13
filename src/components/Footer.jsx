@@ -107,15 +107,15 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="#experience"
+                    href="#background"
                     onClick={(e) => {
                       e.preventDefault()
-                      document.querySelector('#experience')?.scrollIntoView({ behavior: 'smooth' })
+                      document.querySelector('#background')?.scrollIntoView({ behavior: 'smooth' })
                     }}
                     className="text-secondary-300 hover:text-white transition-all duration-200 hover:translate-x-1 flex items-center group"
                   >
                     <span className="w-1 h-1 bg-primary-400 rounded-full mr-2 group-hover:bg-primary-300 transition-colors duration-200"></span>
-                    Experience
+                    Background
                   </a>
                 </li>
                 <li>

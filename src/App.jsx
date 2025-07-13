@@ -2,7 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Hello from './components/Hello'
-import Experience from './components/Experience'
+import Background from './components/Background'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Footer from './components/Footer'
@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={
             <>
               <Hello />
-              <Experience />
+              <Background />
               <Projects />
               <Skills />
             </>
