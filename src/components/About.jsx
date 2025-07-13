@@ -33,7 +33,8 @@ const aboutSections = [
   },
   {
     title: 'CREATOR',
-    description: `I love expressing myself through cosplay. I enjoy creating costumes, attending events, and connecting with people who share the same passion for anime, games, and creativity. Cosplay allows me to become my favorite characters and make new friends from all over the world!`,
+    description: `Of course, I love programming! \nBut creativity isn’t something I limit to code — I enjoy bringing my creativity to life in other kinds of fun ways. \n
+    Photo 1: This is an English learning book I wrote — and yes, it's actually available on Amazon Japan! Link \nPhoto 2: I used to work on promotional tools using LINE Official Accounts, a popular messaging app in Japan. The screenshot shows a demo account I created! \nPhoto 3: I even gave music production a try! Here's a peek at my screen while I was recreating songs using a digital audio workstation.`,
     images: [
       'image_creator1.jpg',
       'image_creator2.jpg',
@@ -93,16 +94,38 @@ const About = () => {
             const fadeRef = useScrollFadeIn();
             return (
               <div key={section.title} ref={fadeRef} className="mb-16 transition-all duration-700 ease-out">
-                <h4 className="text-2xl font-bold text-blue-600 mb-2 flex items-center gap-2">• {section.title} <span role="img" aria-label="icon">{section.title === 'COSPLAYER' ? '🕺' : '⛵'}</span></h4>
+                <h4 className="text-2xl font-bold text-blue-600 mb-2 flex items-center gap-2">
+                  • {section.title} <span role="img" aria-label="icon">
+                    {section.title === 'COSPLAYER' ? '🕺' : section.title === 'SAILOR' ? '⛵' : section.title === 'GUITARIST' ? '🎸' : section.title === 'CREATOR' ? '🛠️' : ''}
+                  </span>
+                </h4>
                 <p className="text-secondary-700 mb-12">
                   {section.description.split('\n').map((line, idx) => {
                     const phrase = "A person doing an online job interview wearing pajama pants!";
+                    const amazonUrl = "https://www.amazon.co.jp/%E8%8B%B1%E8%AA%9E%E3%83%AA%E3%82%B9%E3%83%8B%E3%83%B3%E3%82%B0%E4%B8%8A%E9%81%94%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E5%8B%89%E5%BC%B7%E6%B3%95%E5%85%A5%E9%96%80-%E3%80%8C%E4%BD%95%E3%81%8B%E3%82%89%E5%A7%8B%E3%82%81%E3%82%8C%E3%81%B0%E3%81%84%E3%81%84%E3%81%AE%EF%BC%9F%E3%80%8D%E3%81%A8%E3%81%84%E3%81%86%E5%88%9D%E5%BF%83%E8%80%85%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E5%9F%BA%E6%9C%AC-%E3%82%AD%E3%83%8E%E3%82%B3%E6%9B%B8%E6%88%BF-%E8%8C%84%E5%AD%90%E3%81%AE%E5%A4%A9%E7%84%B6%E6%B0%B4-ebook/dp/B0C6D6BZ1C";
                     if (line.includes(phrase)) {
                       const [before, after] = line.split(phrase);
                       return (
                         <React.Fragment key={idx}>
                           {before}
                           <span className="italic">{phrase}</span>
+                          {after}
+                          <br />
+                        </React.Fragment>
+                      );
+                    } else if (line.includes('Link')) {
+                      const [before, after] = line.split('Link');
+                      return (
+                        <React.Fragment key={idx}>
+                          {before}
+                          <a
+                            href={amazonUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 underline hover:text-blue-800"
+                          >
+                            Link
+                          </a>
                           {after}
                           <br />
                         </React.Fragment>
