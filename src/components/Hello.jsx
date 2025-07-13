@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Hello = () => {
   const scrollToSection = (href) => {
@@ -21,9 +22,11 @@ const Hello = () => {
         <div className="text-center max-w-4xl mx-auto">
           {/* プロフィール画像 */}
           <div className="mb-8">
-            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-primary-400 to-primary-600 flex items-center justify-center text-white text-4xl font-bold mb-4 shadow-2xl ring-4 ring-white/20">
-              TS
-            </div>
+            <img
+              src="/image_profile.jpg"
+              alt="Profile"
+              className="w-32 h-32 mx-auto rounded-full object-cover mb-4 shadow-2xl ring-4 ring-white/20"
+            />
             <p className="text-secondary-600 text-lg font-medium">
               IT Engineer / Full Stack Developer
             </p>
@@ -31,13 +34,16 @@ const Hello = () => {
 
           {/* メインタイトル */}
           <h1 className="text-4xl md:text-6xl font-bold text-secondary-900 mb-6 animate-fade-in">
-            Hello! My name is 
-            <span className="text-gradient block">Toku!</span>
+            {/* Hello! My name is  */}
+            <span className="text-gradient block">Welcome to my portfolio!</span>
           </h1>
 
           {/* サブタイトル */}
           <p className="text-xl text-secondary-700 mb-8 max-w-2xl mx-auto animate-slide-up">
-            I'm studying at QUT and passionate about creating innovative web solutions with modern technologies.
+            Hello, My name is Toku! Thanks so much for visiting this site : )<br />
+            I’d love to share with you the projects I've worked on, the skills I've developed, and about who I am.<br />
+            Through this site, I hope you’ll get to know me better — not just as a developer, but as a person too.<br />
+            Feel free to explore and reach out anytime!
           </p>
 
           {/* CTAボタン */}
@@ -48,12 +54,12 @@ const Hello = () => {
             >
               View My Projects
             </button>
-            <button
-              onClick={() => scrollToSection('#contact')}
-              className="btn-secondary"
+            <Link
+              to="/about"
+              className="btn-secondary flex items-center justify-center"
             >
-              Get In Touch
-            </button>
+              About me
+            </Link>
           </div>
 
           {/* ソーシャルリンク */}
