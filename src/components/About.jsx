@@ -22,16 +22,19 @@ const aboutSections = [
 
 const About = () => {
   return (
-    <section className="section-padding bg-gradient-primary min-h-screen flex items-center justify-center">
-      <div className="container-max w-full bg-white/90 rounded-xl shadow-xl py-16 px-4 md:px-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-2 text-center">About Me</h2>
-        <p className="text-center text-primary-600 text-lg mb-6 font-semibold">Thank you for seeing this page!</p>
-        <hr className="my-4 border-primary-200" />
+    <section className="section-padding bg-gradient-to-br from-blue-50 via-emerald-50 to-orange-50 min-h-screen flex items-center justify-center">
+      <div className="container-max w-full bg-white/95 rounded-2xl border-4 border-blue-200 py-16 px-4 md:px-16">
+        <h2 className="text-4xl font-extrabold text-blue-500 mb-2 text-center flex items-center justify-center gap-2">
+          <span role="img" aria-label="cool"></span> About Me <span role="img" aria-label="cool"></span>
+        </h2>
+        <p className="text-center text-emerald-500 text-lg mb-6 font-semibold">Thank you for seeing this page!</p>
+        
         <div className="mb-8">
-          <h3 className="text-xl font-bold text-secondary-800 mb-2">I am a:</h3>
+          <h3 className="text-4xl font-bold text-orange-400 mb-2 flex items-center gap-2">I am a... <span role="img" aria-label="star"></span></h3>
+          <hr className="my-4 border-blue-200" />
           {aboutSections.map((section, idx) => (
             <div key={section.title} className="mb-16">
-              <h4 className="text-lg font-bold text-primary-700 mb-2">• {section.title}</h4>
+              <h4 className="text-2xl font-bold text-blue-600 mb-2 flex items-center gap-2">• {section.title} <span role="img" aria-label="icon">{section.title === 'COSPLAYER' ? '🕺' : '⛵'}</span></h4>
               <p className="text-secondary-700 mb-6">{section.description}</p>
               <div className="flex flex-wrap gap-8 mb-2 justify-center">
                 {section.images.map((img, i) => (
@@ -39,16 +42,16 @@ const About = () => {
                     key={i}
                     src={img}
                     alt={`${section.title} ${i + 1}`}
-                    className="w-64 h-64 object-cover rounded-xl shadow-lg border border-primary-100 bg-gray-100"
+                    className="w-64 h-64 object-cover rounded-2xl border-4 border-emerald-200 bg-blue-50"
                   />
                 ))}
               </div>
-              {idx < aboutSections.length - 1 && <hr className="my-10 border-dashed border-secondary-300" />}
+              {idx < aboutSections.length - 1 && <hr className="my-10 border-dashed border-blue-200" />}
             </div>
           ))}
         </div>
         <div className="text-center mt-8">
-          <Link to="/" className="btn-primary">Back to Top</Link>
+          <Link to="/" className="btn-primary bg-blue-500 hover:bg-blue-600 text-white border-none">Back to Top</Link>
         </div>
       </div>
     </section>
