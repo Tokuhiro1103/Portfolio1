@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Projects = () => {
   // プロジェクトデータ - ここを編集してあなたのプロジェクトに変更してください
@@ -7,7 +8,7 @@ const Projects = () => {
       id: 1,
       title: 'TPro application',
       description: 'This is a team project. We developed an iOS application with Swift and I implemented BLE connection functionality.',
-      image: '/project1.jpg',
+      image: '/image_Tpro1.jpg',
       technologies: ['Swift', 'BLE', 'CoreBluetooth'],
       github: 'https://github.com/yourusername/project1',
       demo: 'https://project1-demo.com',
@@ -17,7 +18,7 @@ const Projects = () => {
       id: 2,
       title: 'API Development',
       description: 'Implemented a RESTful API and front-end for a web application and implemented a web application',
-      image: '/project2.jpg',
+      image: '/image_API1.png',
       technologies: ['Javascript', 'React.js', 'ReactNative', 'Node.js', 'Express', 'MongoDB', 'Expo'],
       github: 'https://github.com/yourusername/project2',
       demo: 'https://project2-demo.com',
@@ -27,7 +28,7 @@ const Projects = () => {
       id: 3,
       title: 'Notakto',
       description: 'This is a board game app. I implemented the game logic: Save, Redo, Undo',
-      image: '/project3.jpg',
+      image: '/image_notakuto2.png',
       technologies: ['C#'],
       github: 'https://github.com/yourusername/project3',
       demo: null,
@@ -37,7 +38,7 @@ const Projects = () => {
       id: 4,
       title: 'EC site',
       description: 'Developed an e-commerce website with Python, Flask and Bootstrap',
-      image: '/project4.jpg',
+      image: '/image_ECsite1.png',
       technologies: ['Python', 'Flask', 'Bootstrap'],
       github: 'https://github.com/yourusername/project4',
       demo: 'https://project4-demo.com',
@@ -70,7 +71,7 @@ const Projects = () => {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-            プロジェクト
+            Projects
           </h2>
           <p className="text-secondary-600 text-lg max-w-2xl mx-auto">
             私が開発したプロジェクトの一部をご紹介します
@@ -84,18 +85,11 @@ const Projects = () => {
               <div className="card h-full hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 {/* プロジェクト画像 */}
                 <div className="relative overflow-hidden rounded-lg mb-6">
-                  <div className="w-full h-48 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
-                    {/* ここにプロジェクト画像を配置 */}
-                    <div className="text-center">
-                      <div className="w-16 h-16 mx-auto mb-2 bg-primary-500 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg">
-                        {project.title.charAt(0)}
-                      </div>
-                      <p className="text-primary-700 text-sm font-medium">
-                        プロジェクト画像
-                      </p>
-                    </div>
-                  </div>
-                  
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover"
+                  />
                   {/* オーバーレイ */}
                   <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="flex space-x-4">
@@ -163,19 +157,15 @@ const Projects = () => {
                         </svg>
                       </a>
                     )}
-                    {project.demo && (
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary-600 hover:text-primary-700 font-medium text-sm flex items-center group/link"
-                      >
-                        デモを見る
-                        <svg className="w-4 h-4 ml-1 transform group-hover/link:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </a>
-                    )}
+                    <Link
+                      to={`/projects/${project.id}`}
+                      className="text-primary-600 hover:text-primary-700 font-medium text-sm flex items-center group/link"
+                    >
+                      See detail
+                      <svg className="w-4 h-4 ml-1 transform group-hover/link:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
                   </div>
                 </div>
               </div>

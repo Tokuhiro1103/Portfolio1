@@ -7,6 +7,7 @@ import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Footer from './components/Footer'
 import About from './components/About'
+import ProjectDetail from './components/ProjectDetail'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             </>
           } />
           <Route path="/about" element={<About />} />
+          <Route path="/projects/:id" element={<ProjectDetail />} />
         </Routes>
       </main>
       <Footer />
