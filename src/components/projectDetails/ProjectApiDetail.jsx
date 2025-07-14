@@ -7,29 +7,28 @@ const ProjectApiDetail = () => (
       <img src="/image_API1.png" alt="API Development" className="w-full h-64 object-cover rounded-lg mb-8" />
       <h2 className="text-3xl font-bold text-primary-700 mb-4">API Development</h2>
 
-      <h3 className="text-xl font-semibold text-secondary-900 mb-2">プロジェクト概要</h3>
+      
       <p className="mb-6 text-secondary-700">
-        ここにAPI Developmentプロジェクトの概要を詳しく記載します。
+      This is a full-stack project designed to simulate a Music Playlist management system. It includes both a REST API server-side application and a responsive web frontend, as well as a mobile version built with React Native. The goal of this project was to gain practical experience in building and integrating full-stack applications across platforms.
       </p>
 
-      <h3 className="text-xl font-semibold text-secondary-900 mb-2">開発背景</h3>
-      <p className="mb-6 text-secondary-700">
-        どんな課題を解決したかったか、なぜこのプロジェクトを始めたかなど。
-      </p>
-
-      <h3 className="text-xl font-semibold text-secondary-900 mb-2">担当した機能</h3>
+      <h3 className="text-xl font-semibold text-secondary-900 mb-2">Features</h3>
       <ul className="list-disc pl-6 mb-6 text-secondary-700">
-        <li>RESTful APIの設計・実装</li>
-        <li>フロントエンドの開発</li>
-        <li>データベース設計</li>
+        <li>User authentication (login/logout)</li>
+        <li>Playlist management (create, edit, delete)</li>
+        <li>Artist and song listings</li>
+        <li>Client-server communication through RESTful API</li>
       </ul>
 
-      <h3 className="text-xl font-semibold text-secondary-900 mb-2">技術的な工夫・成果</h3>
+      <h3 className="text-xl font-semibold text-secondary-900 mb-2">Features（Mobile）</h3>
       <ul className="list-disc pl-6 mb-6 text-secondary-700">
-        <li>Node.jsとExpressによる効率的なAPI設計</li>
-        <li>React/ReactNativeによるUI開発</li>
+        <li>Shake to Create Playlist</li>
+        <li>Notification</li>
+        <li>Playlist Sharing</li>
       </ul>
 
+
+      <h3 className="text-xl font-semibold text-secondary-900 mb-2">Technologies used</h3>
       <div className="flex flex-wrap gap-2 mb-6">
         <span className="px-3 py-1 bg-primary-100 text-primary-700 text-xs rounded-full font-medium">Javascript</span>
         <span className="px-3 py-1 bg-primary-100 text-primary-700 text-xs rounded-full font-medium">React.js</span>
@@ -41,10 +40,11 @@ const ProjectApiDetail = () => (
       </div>
 
       <div className="flex space-x-4 mt-6">
-        <a href="https://github.com/yourusername/project2" target="_blank" rel="noopener noreferrer" className="btn-secondary">GitHub</a>
-        <a href="https://project2-demo.com" target="_blank" rel="noopener noreferrer" className="btn-primary">Demo</a>
+        
+        <a href="https://github.com/yourusername/project2" target="_blank" rel="noopener noreferrer" className="btn-secondary">GitHub (Web version)</a>
+        <a href="https://github.com/yourusername/project2" target="_blank" rel="noopener noreferrer" className="btn-secondary">GitHub (Mobile version)</a>
       </div>
-      <div className="mt-8 text-center">
+      <div className="mt-32 text-center">
         <Link to="/" className="btn-primary">Back to Projects</Link>
       </div>
     </div>
