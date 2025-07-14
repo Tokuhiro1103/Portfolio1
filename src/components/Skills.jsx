@@ -63,7 +63,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
           {skillCategories.map((category) => (
             <div key={category.name} className="card hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
               <h3 className="text-xl font-bold text-secondary-900 mb-6 text-center">

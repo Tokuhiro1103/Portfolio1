@@ -15,11 +15,10 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', href: '#home' },
-    { name: 'Profile', href: '#profile' },
     { name: 'Background', href: '#background' },
-    { name: 'Works', href: '#works' },
+    { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
-    { name: 'contact', href: '#contact' },
+    { name: 'Contact', href: '#contact' },
   ]
 
   const scrollToSection = (href) => {
