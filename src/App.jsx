@@ -8,6 +8,7 @@ import Skills from './components/Skills'
 import Footer from './components/Footer'
 import About from './components/About'
 import ProjectDetail from './components/ProjectDetail'
+import Contact from './components/Contact'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           } />
           <Route path="/about" element={<About />} />
           <Route path="/projects/:id" element={<ProjectDetail />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
       <Footer />

@@ -15,13 +15,18 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', href: '#home' },
+    { name: 'Profile', href: '#profile' },
     { name: 'Background', href: '#background' },
-    { name: 'Projects', href: '#projects' },
+    { name: 'Works', href: '#works' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact', href: '/contact' },
   ]
 
   const scrollToSection = (href) => {
+    if (href.startsWith('/')) {
+      window.location.href = href;
+      return;
+    }
     const element = document.querySelector(href)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
