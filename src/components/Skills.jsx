@@ -16,6 +16,7 @@ import {
   FaGitAlt
 } from 'react-icons/fa'
 import { SiMongodb } from "react-icons/si";
+import GreetingSection from './GreetingSection';
 
 const skillCategories = [
   {
@@ -83,9 +84,8 @@ const Skills = () => {
           ))}
         </div>
       </div>
-      <div className="text-center mt-12">
-        <Link to="/about" className="btn-secondary inline-block">自己紹介を見る</Link>
-      </div>
+      
+      <GreetingSection />
     </section>
   )
 }
