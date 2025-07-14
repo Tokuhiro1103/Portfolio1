@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('');
+  const formRef = useRef();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -11,20 +13,25 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
-    try {
-      // ここで実際のメール送信APIにPOSTする（例: EmailJS, Formspree, 自作APIなど）
-      // 例: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(form) })
-      setTimeout(() => setStatus('success'), 1200); // デモ用
-    } catch (err) {
+    emailjs.sendForm(
+      'service_sidgwwm', // サービスID
+      'template_4l6o983', // テンプレートID
+      formRef.current,    // フォーム要素
+      'p6WifxsIrbjnSJdHX' // パブリックキー
+    )
+    .then((result) => {
+      setStatus('success');
+      setForm({ name: '', email: '', message: '' });
+    }, (error) => {
       setStatus('error');
-    }
+    });
   };
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-emerald-50 py-16">
       <div className="container-max w-full bg-white/95 rounded-2xl border-4 border-blue-200 py-16 px-4 md:px-16">
         <h2 className="text-3xl font-bold text-blue-600 mb-6 text-center">Contact</h2>
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block text-blue-700 font-semibold mb-2">Name</label>
             <input
@@ -35,6 +42,7 @@ const Contact = () => {
               required
               className="w-full px-4 py-3 rounded-lg border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
+            <input type="hidden" name="from_name" value={form.name} />
           </div>
           <div>
             <label className="block text-blue-700 font-semibold mb-2">Email</label>
@@ -57,6 +65,7 @@ const Contact = () => {
               rows={6}
               className="w-full px-4 py-3 rounded-lg border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
+            <input type="hidden" name="from_message" value={form.message} />
           </div>
           <button
             type="submit"
