@@ -16,7 +16,7 @@ const Projects = () => {
     {
       id: 2,
       title: 'API Development',
-      description: 'Implemented a RESTful API and front-end for a web application and implemented a web application',
+      description: 'Implemented a REST API and front-end for a application and implemented a web and mobile application',
       image: '/image_API1.png',
       technologies: ['Javascript', 'React.js', 'ReactNative', 'Node.js', 'Express', 'MongoDB', 'Expo'],
       github: 'https://github.com/yourusername/project2',
@@ -25,7 +25,7 @@ const Projects = () => {
     {
       id: 3,
       title: 'Notakto',
-      description: 'This is a board game app. I implemented the game logic: Save, Redo, Undo',
+      description: 'This is a board game app. I implemented the game logic: Save, Load, Redo, Undo',
       image: '/image_notakuto2.png',
       technologies: ['C#'],
       github: 'https://github.com/yourusername/project3',
@@ -33,10 +33,10 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: 'EC site',
-      description: 'Developed an e-commerce website with Python, Flask and Bootstrap',
+      title: 'E-commerce site',
+      description: 'Developed a mock e-commerce website with Python, Flask and Bootstrap',
       image: '/image_ECsite1.png',
-      technologies: ['Python', 'Flask', 'Bootstrap'],
+      technologies: ['Python', 'Flask', 'Bootstrap','SQLite'],
       github: 'https://github.com/yourusername/project4',
       featured: false
     },
@@ -140,7 +140,7 @@ const Projects = () => {
                       to={`/projects/${project.id}`}
                       className="text-primary-600 hover:text-primary-700 font-medium text-sm flex items-center group/link"
                     >
-                      See detail
+                    Detail
                       <svg className="w-4 h-4 ml-1 transform group-hover/link:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
