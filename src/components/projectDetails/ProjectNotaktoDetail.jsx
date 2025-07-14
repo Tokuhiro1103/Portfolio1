@@ -37,7 +37,7 @@ const ProjectNotaktoDetail = () => (
         <a href="https://github.com/yourusername/project3" target="_blank" rel="noopener noreferrer" className="btn-secondary">GitHub</a>
       </div>
       <div className="mt-8 text-center">
-        <Link to="/projects" className="btn-primary">Back to Projects</Link>
+        <Link to="/" className="btn-primary">Back to Projects</Link>
       </div>
     </div>
   </section>

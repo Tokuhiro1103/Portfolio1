@@ -7,29 +7,30 @@ const ProjectTProDetail = () => (
       <img src="/image_Tpro1.jpg" alt="TPro application" className="w-full h-64 object-cover rounded-lg mb-8" />
       <h2 className="text-3xl font-bold text-primary-700 mb-4">TPro application</h2>
 
-      <h3 className="text-xl font-semibold text-secondary-900 mb-2">プロジェクト概要</h3>
+      
       <p className="mb-6 text-secondary-700">
-        ここにTPro applicationの概要を詳しく記載します。
+      This project was a collaborative initiative with an industry partner, focused on developing an iOS application as part of a team-based software development project.
       </p>
 
-      <h3 className="text-xl font-semibold text-secondary-900 mb-2">開発背景</h3>
+      <h3 className="text-xl font-semibold text-secondary-900 mb-2">Project Background</h3>
       <p className="mb-6 text-secondary-700">
-        どんな課題を解決したかったか、なぜこのプロジェクトを始めたかなど。
+      Physiotherapists often face challenges in monitoring patient posture and exercise adherence outside clinical settings. Our industry partner, GravityFit’s TPro sensor captures pressure and stretch data that reflect spinal alignment and core engagement. However, prior to this project, there was no digital platform available for therapists to prescribe, monitor, and evaluate TPro-based exercises remotely.
       </p>
 
-      <h3 className="text-xl font-semibold text-secondary-900 mb-2">担当した機能</h3>
+      <h3 className="text-xl font-semibold text-secondary-900 mb-2">Key Outcomes Delivered</h3>
       <ul className="list-disc pl-6 mb-6 text-secondary-700">
-        <li>BLE通信機能の実装</li>
-        <li>iOSアプリのUI設計</li>
-        <li>テスト・デバッグ</li>
+        <li>iOS Prototype: Developed a Swift-based mobile application capable of pairing with the TPro sensor (or a mock peripheral) to stream live sensor vectors in real time.</li>
+        <li>Sensor Database: Designed a normalized database schema with a sample dataset to store historical posture metrics and session metadata.</li>
+        <li>Scoring Algorithm: Implemented a rule-based algorithm to convert raw sensor data into intuitive compliance scores, providing immediate feedback to both users and therapists.</li>
+        <li>Data Visualization: Integrated in-app visualizations including posture deviation, movement speed, and resistance to support clinical decision-making.</li>
       </ul>
 
-      <h3 className="text-xl font-semibold text-secondary-900 mb-2">技術的な工夫・成果</h3>
-      <ul className="list-disc pl-6 mb-6 text-secondary-700">
-        <li>SwiftのCoreBluetoothを活用した安定した接続</li>
-        <li>UI/UXの改善</li>
-      </ul>
+      <h3 className="text-xl font-semibold text-secondary-900 mb-2">Personal Contribution</h3>
+      <p className="mb-6 text-secondary-700">
+      I was responsible for implementing the Bluetooth Low Energy (BLE) communication functionality, enabling the mobile app to connect and receive data from devices.
+      </p>
 
+      <h3 className="text-xl font-semibold text-secondary-900 mb-2">Technologies Used</h3>
       <div className="flex flex-wrap gap-2 mb-6">
         <span className="px-3 py-1 bg-primary-100 text-primary-700 text-xs rounded-full font-medium">Swift</span>
         <span className="px-3 py-1 bg-primary-100 text-primary-700 text-xs rounded-full font-medium">BLE</span>
@@ -38,10 +39,9 @@ const ProjectTProDetail = () => (
 
       <div className="flex space-x-4 mt-6">
         <a href="https://github.com/yourusername/project1" target="_blank" rel="noopener noreferrer" className="btn-secondary">GitHub</a>
-        <a href="https://project1-demo.com" target="_blank" rel="noopener noreferrer" className="btn-primary">Demo</a>
       </div>
       <div className="mt-8 text-center">
-        <Link to="/projects" className="btn-primary">Back to Projects</Link>
+        <Link to="/" className="btn-primary">Back to Projects</Link>
       </div>
     </div>
   </section>

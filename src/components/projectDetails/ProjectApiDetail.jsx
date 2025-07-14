@@ -45,7 +45,7 @@ const ProjectApiDetail = () => (
         <a href="https://project2-demo.com" target="_blank" rel="noopener noreferrer" className="btn-primary">Demo</a>
       </div>
       <div className="mt-8 text-center">
-        <Link to="/projects" className="btn-primary">Back to Projects</Link>
+        <Link to="/" className="btn-primary">Back to Projects</Link>
       </div>
     </div>
   </section>
