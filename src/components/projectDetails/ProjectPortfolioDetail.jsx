@@ -32,7 +32,7 @@ const ProjectPortfolioDetail = () => (
       <div className="flex space-x-4 mt-6">
         <a href="https://github.com/yourusername/portfolio" target="_blank" rel="noopener noreferrer" className="btn-secondary">GitHub</a>
       </div>
-      <div className="mt-8 text-center">
+      <div className="mt-32 text-center">
         <Link to="/" className="btn-primary">Back to Projects</Link>
       </div>
     </div>

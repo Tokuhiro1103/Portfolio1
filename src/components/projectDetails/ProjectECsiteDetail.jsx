@@ -8,7 +8,7 @@ const ProjectECsiteDetail = () => (
       <h2 className="text-3xl font-bold text-primary-700 mb-4">E-commerce site</h2>
 
       <p className="mb-6 text-secondary-700">
-      This is a mock e-commerce application built with Python and Flask. The project simulates a music-themed online store where users can browse and interact with products
+      This is a mock e-commerce application built with Python and Flask. The project simulates a music-themed online store where users can browse and interact with products.
       </p>
 
       <h3 className="text-xl font-semibold text-secondary-900 mb-2">Features</h3>

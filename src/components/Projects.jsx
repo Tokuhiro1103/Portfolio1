@@ -16,7 +16,7 @@ const Projects = () => {
     {
       id: 2,
       title: 'API Development',
-      description: 'Implemented a REST API and front-end for a application and implemented a web and mobile application',
+      description: 'Implemented a REST API and front-end for a application and implemented a web and mobile application.',
       image: '/image_API3.png',
       technologies: ['Javascript', 'React.js', 'ReactNative', 'Node.js', 'Express', 'MongoDB', 'Expo'],
       github: 'https://github.com/yourusername/project2',
@@ -25,7 +25,7 @@ const Projects = () => {
     {
       id: 3,
       title: 'Notakto',
-      description: 'This is a board game app. I implemented the game logic: Save, Load, Redo, Undo',
+      description: 'This is a board game app. I implemented the game logic: Save, Load, Redo and Undo.',
       image: '/image_notakuto2.png',
       technologies: ['C#'],
       github: 'https://github.com/yourusername/project3',
@@ -34,7 +34,7 @@ const Projects = () => {
     {
       id: 4,
       title: 'E-commerce site',
-      description: 'Developed a mock e-commerce website with Python, Flask and Bootstrap',
+      description: 'Developed a mock e-commerce website with Python, Flask and Bootstrap.',
       image: '/image_ECsite1.png',
       technologies: ['Python', 'Flask', 'Bootstrap','SQLite'],
       github: 'https://github.com/yourusername/project4',
@@ -43,7 +43,7 @@ const Projects = () => {
     {
       id: 5,
       title: 'Portfolio site',
-      description: 'This site. Used React and Tailwind CSS',
+      description: 'This site. Used React and Tailwind CSS.',
       image: '/image_portfolio1.png',
       technologies: ['React.js', 'Tailwind CSS', 'Vite'],
       github: 'https://github.com/yourusername/portfolio',
@@ -67,7 +67,7 @@ const Projects = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div key={project.id} className="group">
-              <div className="card h-full hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="card h-full hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
                 {/* プロジェクト画像 */}
                 <div className="relative overflow-hidden rounded-lg mb-6">
                   <img
@@ -103,7 +103,7 @@ const Projects = () => {
                 </div>
 
                 {/* プロジェクト情報 */}
-                <div className="flex-1">
+                <div className="flex-1 flex flex-col">
                   <h3 className="text-xl font-bold text-secondary-900 mb-2 group-hover:text-primary-600 transition-colors duration-200">
                     {project.title}
                   </h3>
@@ -121,31 +121,32 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-                  {/* リンク */}
-                  <div className="flex space-x-4">
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary-600 hover:text-primary-700 font-medium text-sm flex items-center group/link"
-                      >
-                        GitHub 
-                        <svg className="w-4 h-4 ml-1 transform group-hover/link:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </a>
-                    )}
-                    <Link
-                      to={`/projects/${project.id}`}
+                </div>
+                
+                {/* リンク - 一番下に配置 */}
+                <div className="flex space-x-4 mt-auto pt-4">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-primary-600 hover:text-primary-700 font-medium text-sm flex items-center group/link"
                     >
-                    Detail
+                      GitHub 
                       <svg className="w-4 h-4 ml-1 transform group-hover/link:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
-                    </Link>
-                  </div>
+                    </a>
+                  )}
+                  <Link
+                    to={`/projects/${project.id}`}
+                    className="text-primary-600 hover:text-primary-700 font-medium text-sm flex items-center group/link"
+                  >
+                  Detail
+                    <svg className="w-4 h-4 ml-1 transform group-hover/link:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
                 </div>
               </div>
             </div>
