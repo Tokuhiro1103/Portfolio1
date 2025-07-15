@@ -29,12 +29,11 @@ const Contact = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-emerald-50 py-16">
-      <div className="container-max w-full bg-white/95 rounded-2xl border-4 border-blue-200 py-16 px-4 md:px-16">
+      <div className="container-max w-full bg-white/95 rounded-2xl py-16 px-4 md:px-16">
         <h2 className="text-3xl font-bold text-blue-600 mb-6 text-center">Contact</h2>
         <p className="text-secondary-600 text-lg max-w-2xl mx-auto text-center mb-16">
           Feel free to contact me!
         </p>
-        <hr className="my-4 border-blue-200" />
         <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block text-blue-700 font-semibold mb-2">Name</label>

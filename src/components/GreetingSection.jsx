@@ -11,7 +11,7 @@ const GreetingSection = () => {
 
   return (
     <section className="py-16 bg-white/80">
-      <div className="container-max mx-auto text-center rounded-2xl border-2 border-blue-100 shadow-md p-8">
+      <div className="container-max mx-auto text-center rounded-2xl border-blue-100 p-8">
         <p className="text-2xl font-semibold text-blue-700 mb-6">
           Thanks for checking out my portfolio! <br/>
           If you'd like to get to know me beyond the code — who I am, what I enjoy —<br/>

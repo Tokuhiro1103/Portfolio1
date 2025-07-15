@@ -39,19 +39,27 @@ const Hello = () => {
             </p>
           </div>
 
-          {/* メインタイトル */}
-          <h1 className="text-4xl md:text-6xl font-bold text-secondary-900 mb-6 animate-fade-in">
-            {/* Hello! My name is  */}
-            <span className="text-gradient block">Welcome to my portfolio!</span>
-          </h1>
+          
+          {/* <h1 className="text-4xl md:text-2xl font-bold text-black mb-6 animate-fade-in">
+          
+            <span className="text-black block">Welcome to my portfolio</span>
+          </h1> */}
 
           {/* サブタイトル */}
-          <p className="text-xl text-secondary-700 mb-8 max-w-2xl mx-auto animate-slide-up">
-            Hello, My name is Toku! Thanks so much for visiting this site : )<br />
-            I'd love to share with you the projects I've worked on, the skills I've developed, and about who I am.<br />
-            Through this site, I hope you'll get to know me better — not just as a developer, but as a person too.<br />
-            Feel free to explore and reach out anytime!
-          </p>
+          <div className="text-xl text-secondary-700 mb-8 max-w-3xl mx-auto animate-slide-up space-y-4">
+            <p className="text-5xl font-semibold text-primary-600 mb-4">
+            Hello, my name is Toku!
+            </p>
+            <p className="leading-relaxed">
+              Thanks so much for visiting this site! I'd love to share with you the projects I've worked on, the skills I've developed, and about who I am.
+            </p>
+            <p className="leading-relaxed">
+              Through this site, I hope you'll get to know me better — not just as a developer, but as a person too.
+            </p>
+            <p className="text-lg font-medium text-primary-600 mt-6">
+              Feel free to explore and reach out anytime!
+            </p>
+          </div>
 
           {/* CTAボタン */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">

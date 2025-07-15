@@ -33,8 +33,8 @@ const aboutSections = [
   },
   {
     title: 'CREATOR',
-    description: `Of course, I love programming! \nBut creativity isn’t something I limit to code — I enjoy bringing my creativity to life in other kinds of fun ways. \n
-    Photo 1: This is an English learning book I wrote — and yes, it's actually available on Amazon Japan! Link \nPhoto 2: I used to work on promotional tools using LINE Official Accounts, a popular messaging app in Japan. The screenshot shows a demo account I created! \nPhoto 3: I even gave music production a try! Here's a peek at my screen while I was recreating songs using a digital audio workstation.`,
+    description: `Of course, I love programming! \nBut creativity isn't something I limit to code — I enjoy bringing my creativity to life in other kinds of fun ways. \n
+    Photo 1: This is an English learning book I wrote — and yes, it's actually available on Amazon Japan! Link \n\nPhoto 2: I used to work on promotional tools using LINE Official Accounts, a popular messaging app in Japan. The screenshot shows a demo account I created! \n\nPhoto 3: I even gave music production a try! Here's a peek at my screen while I was recreating songs using a digital audio workstation.`,
     images: [
       'image_creator1.jpg',
       'image_creator2.jpg',
@@ -82,7 +82,7 @@ const About = () => {
 
   return (
     <section className="section-padding bg-gradient-to-br from-blue-50 via-emerald-50 to-orange-50 min-h-screen flex items-center justify-center">
-      <div className="container-max w-full bg-white/95 rounded-2xl border-4 border-blue-200 py-16 px-4 md:px-16">
+      <div className="container-max w-full max-w-7xl mx-auto bg-white/95 rounded-2xl border-4 border-blue-200 py-16 px-4 md:px-16">
         <h2 ref={titleFade} className="text-4xl font-extrabold text-blue-500 mb-2 text-center flex items-center justify-center gap-2 transition-all duration-700 ease-out">
           <span role="img" aria-label="cool"></span> About Me <span role="img" aria-label="cool"></span>
         </h2>
