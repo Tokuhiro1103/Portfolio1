@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ProjectApiDetail = () => (
   <section className="section-padding bg-white min-h-screen flex items-center justify-center">
     <div className="w-full max-w-5xl bg-white rounded-xl shadow-none p-8 mx-auto">
-      <img src="/image_API7.png" alt="API Development" className="w-full h-64 object-cover rounded-lg mb-8" />
+      <img src={`${import.meta.env.BASE_URL}image_API7.png`} alt="API Development" className="w-full h-64 object-cover rounded-lg mb-8" />
       <h2 className="text-3xl font-bold text-primary-700 mb-4">API Development</h2>
 
       

@@ -30,7 +30,7 @@ const Hello = () => {
           {/* プロフィール画像 */}
           <div className="mb-8">
             <img
-              src="/image_profile.jpg"
+              src={`${import.meta.env.BASE_URL}image_profile.jpg`}
               alt="Profile"
               className="w-32 h-32 mx-auto rounded-full object-cover mb-4 shadow-2xl ring-4 ring-white/20"
             />
