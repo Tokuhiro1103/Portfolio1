@@ -154,7 +154,7 @@ const About = () => {
                   {section.images.map((img, i) => (
                     <img
                       key={i}
-                      src={`${import.meta.env.BASE_URL}assets/${img}`}
+                      src={`${import.meta.env.BASE_URL}${img}`}
                       alt={`${section.title} ${i + 1}`}
                       className="rounded-2xl border-4 border-emerald-200 object-cover max-h-[300px] transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
                       style={{ height: '280px', width: 'auto' }}
