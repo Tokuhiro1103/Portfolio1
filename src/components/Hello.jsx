@@ -93,7 +93,7 @@ const Hello = () => {
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/tokuhiro-sakemi-ba0772244"
               target="_blank"
               rel="noopener noreferrer"
               className="text-secondary-600 hover:text-primary-600 transition-all duration-200 hover:scale-110"
