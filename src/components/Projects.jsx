@@ -8,7 +8,7 @@ const Projects = () => {
       id: 1,
       title: 'TPro application',
       description: 'This is a team project. We developed an iOS application with Swift and I implemented BLE connection functionality.',
-      image: '/image_Tpro1.jpg',
+      image: `${import.meta.env.BASE_URL}image_Tpro1.jpg`,
       technologies: ['Swift', 'BLE', 'CoreBluetooth'],
       github: 'https://github.com/Tokuhiro1103/TproApplication',
       featured: true
@@ -17,7 +17,7 @@ const Projects = () => {
       id: 2,
       title: 'API Development',
       description: 'Implemented a REST API and front-end for a application and implemented a web and mobile application.',
-      image: '/image_API3.png',
+      image: `${import.meta.env.BASE_URL}image_API3.png`,
       technologies: ['Javascript', 'React.js', 'ReactNative', 'Node.js', 'Express', 'MongoDB', 'Expo'],
       github: 'https://github.com/Tokuhiro1103/Playlist',
       featured: true
@@ -26,7 +26,7 @@ const Projects = () => {
       id: 3,
       title: 'Notakto',
       description: 'This is a board game app. I implemented the game logic: Save, Load, Redo and Undo.',
-      image: '/image_notakuto2.png',
+      image: `${import.meta.env.BASE_URL}image_notakuto2.png`,
       technologies: ['C#'],
       github: 'https://github.com/Tokuhiro1103/Nokutakto',
       featured: false
@@ -35,7 +35,7 @@ const Projects = () => {
       id: 4,
       title: 'E-commerce site',
       description: 'Developed a mock e-commerce website with Python, Flask and Bootstrap.',
-      image: '/image_ECsite1.png',
+      image: `${import.meta.env.BASE_URL}image_ECsite1.png`,
       technologies: ['Python', 'Flask', 'Bootstrap','SQLite'],
       github: 'https://github.com/Tokuhiro1103/FantasticMusic',
       featured: false
@@ -44,7 +44,7 @@ const Projects = () => {
       id: 5,
       title: 'Portfolio site',
       description: 'This site. Used React and Tailwind CSS.',
-      image: '/image_portfolio1.png',
+      image: `${import.meta.env.BASE_URL}image_portfolio1.png`,
       technologies: ['React.js', 'Tailwind CSS', 'Vite'],
       github: 'https://github.com/Tokuhiro1103/Portfolio1',
       featured: false
