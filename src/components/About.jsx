@@ -23,7 +23,7 @@ const aboutSections = [
   {
     title: 'COSPLAYER',
     description: `I’m also a fan of cosplay! \nLast year, I joined the cosplay meetup at Oz Comic-Con in South Bank and dressed up as a character from one of my favorite games — Genshin Impact! It was such a blast to see so many creative costumes and meet fellow fans. \n
-    And as for the last photo... that’s from a quirky Japanese event called “Jimi Halloween” — where people cosplay everyday, “relatable” situations. \nMy costume idea? “A person doing an online job interview wearing pajama pants! ” 😄`,
+    And as for the last photo... that’s from a quirky Japanese event called “Jimi (Mundane) Halloween” — where people cosplay everyday, “relatable” situations. \nMy costume idea? “A person doing an online job interview wearing pajama pants! ” 😄`,
     images: [
       'image_cosplay1.jpg',
       'image_cosplay2.jpg',
