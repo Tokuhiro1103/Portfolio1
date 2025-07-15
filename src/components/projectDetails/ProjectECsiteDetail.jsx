@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ProjectECsiteDetail = () => (
   <section className="section-padding bg-white min-h-screen flex items-center justify-center">
     <div className="w-full max-w-5xl bg-white rounded-xl shadow-none p-8 mx-auto">
-      <img src="/image_ECsite1.png" alt="EC site" className="w-full h-64 object-cover rounded-lg mb-8" />
+      <img src="/image_ECsite2.png" alt="EC site" className="w-full h-64 object-cover rounded-lg mb-8" />
       <h2 className="text-3xl font-bold text-primary-700 mb-4">E-commerce site</h2>
 
       <p className="mb-6 text-secondary-700">

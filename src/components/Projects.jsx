@@ -17,7 +17,7 @@ const Projects = () => {
       id: 2,
       title: 'API Development',
       description: 'Implemented a REST API and front-end for a application and implemented a web and mobile application',
-      image: '/image_API1.png',
+      image: '/image_API3.png',
       technologies: ['Javascript', 'React.js', 'ReactNative', 'Node.js', 'Express', 'MongoDB', 'Expo'],
       github: 'https://github.com/yourusername/project2',
       featured: true
@@ -44,7 +44,7 @@ const Projects = () => {
       id: 5,
       title: 'Portfolio site',
       description: 'This site. Used React and Tailwind CSS',
-      image: '/project5.jpg',
+      image: '/image_portfolio1.png',
       technologies: ['React.js', 'Tailwind CSS', 'Vite'],
       github: 'https://github.com/yourusername/portfolio',
       featured: false
