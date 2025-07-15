@@ -1,13 +1,45 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  // ページ変更時に一番上にスクロール
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     })
+  }
+
+  const scrollToSection = (href, path) => {
+    // 現在のページと異なるページに遷移する場合
+    if (location.pathname !== path) {
+      navigate(path)
+      // メインページ内のセクションへのスクロールのみ処理
+      setTimeout(() => {
+        if (href.startsWith('#')) {
+          const element = document.querySelector(href)
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' })
+          }
+        }
+      }, 100)
+    } else {
+      // 同じページ内でのスクロール
+      if (href.startsWith('#')) {
+        const element = document.querySelector(href)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }
+    }
   }
 
   return (
@@ -67,69 +99,58 @@ const Footer = () => {
               <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
               <ul className="space-y-3">
                 <li>
-                  <a
-                    href="#about"
-                    onClick={(e) => {
-                      e.preventDefault()
-                      document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' })
-                    }}
-                    className="text-secondary-300 hover:text-white transition-all duration-200 hover:translate-x-1 flex items-center group"
+                  <button
+                    onClick={() => scrollToSection('#home', '/')}
+                    className="text-secondary-300 hover:text-white transition-all duration-200 hover:translate-x-1 flex items-center group w-full text-left"
                   >
                     <span className="w-1 h-1 bg-primary-400 rounded-full mr-2 group-hover:bg-primary-300 transition-colors duration-200"></span>
-                    About Me
-                  </a>
+                    Home
+                  </button>
                 </li>
                 <li>
-                  <a
-                    href="#skills"
-                    onClick={(e) => {
-                      e.preventDefault()
-                      document.querySelector('#skills')?.scrollIntoView({ behavior: 'smooth' })
-                    }}
-                    className="text-secondary-300 hover:text-white transition-all duration-200 hover:translate-x-1 flex items-center group"
-                  >
-                    <span className="w-1 h-1 bg-primary-400 rounded-full mr-2 group-hover:bg-primary-300 transition-colors duration-200"></span>
-                    Skills
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#projects"
-                    onClick={(e) => {
-                      e.preventDefault()
-                      document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })
-                    }}
-                    className="text-secondary-300 hover:text-white transition-all duration-200 hover:translate-x-1 flex items-center group"
-                  >
-                    <span className="w-1 h-1 bg-primary-400 rounded-full mr-2 group-hover:bg-primary-300 transition-colors duration-200"></span>
-                    Projects
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#background"
-                    onClick={(e) => {
-                      e.preventDefault()
-                      document.querySelector('#background')?.scrollIntoView({ behavior: 'smooth' })
-                    }}
-                    className="text-secondary-300 hover:text-white transition-all duration-200 hover:translate-x-1 flex items-center group"
+                  <button
+                    onClick={() => scrollToSection('#background', '/')}
+                    className="text-secondary-300 hover:text-white transition-all duration-200 hover:translate-x-1 flex items-center group w-full text-left"
                   >
                     <span className="w-1 h-1 bg-primary-400 rounded-full mr-2 group-hover:bg-primary-300 transition-colors duration-200"></span>
                     Background
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a
-                    href="#contact"
-                    onClick={(e) => {
-                      e.preventDefault()
-                      document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
-                    }}
-                    className="text-secondary-300 hover:text-white transition-all duration-200 hover:translate-x-1 flex items-center group"
+                  <button
+                    onClick={() => scrollToSection('#projects', '/')}
+                    className="text-secondary-300 hover:text-white transition-all duration-200 hover:translate-x-1 flex items-center group w-full text-left"
+                  >
+                    <span className="w-1 h-1 bg-primary-400 rounded-full mr-2 group-hover:bg-primary-300 transition-colors duration-200"></span>
+                    Projects
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection('#skills', '/')}
+                    className="text-secondary-300 hover:text-white transition-all duration-200 hover:translate-x-1 flex items-center group w-full text-left"
+                  >
+                    <span className="w-1 h-1 bg-primary-400 rounded-full mr-2 group-hover:bg-primary-300 transition-colors duration-200"></span>
+                    Skills
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection('/about', '/about')}
+                    className="text-secondary-300 hover:text-white transition-all duration-200 hover:translate-x-1 flex items-center group w-full text-left"
+                  >
+                    <span className="w-1 h-1 bg-primary-400 rounded-full mr-2 group-hover:bg-primary-300 transition-colors duration-200"></span>
+                    About
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection('/contact', '/contact')}
+                    className="text-secondary-300 hover:text-white transition-all duration-200 hover:translate-x-1 flex items-center group w-full text-left"
                   >
                     <span className="w-1 h-1 bg-primary-400 rounded-full mr-2 group-hover:bg-primary-300 transition-colors duration-200"></span>
                     Contact
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>

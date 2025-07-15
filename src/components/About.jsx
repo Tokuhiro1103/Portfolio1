@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 
 const aboutSections = [
   {
@@ -67,11 +67,19 @@ function useScrollFadeIn() {
 }
 
 const About = () => {
+  const navigate = useNavigate()
+  const location = useLocation()
+  
   const titleFade = useScrollFadeIn();
   const greetFade = useScrollFadeIn();
   const closingFade = useScrollFadeIn();
   const buttonFade = useScrollFadeIn();
   const h3Fade = useScrollFadeIn();
+
+  const navigateToContact = () => {
+    navigate('/contact')
+  }
+
   return (
     <section className="section-padding bg-gradient-to-br from-blue-50 via-emerald-50 to-orange-50 min-h-screen flex items-center justify-center">
       <div className="container-max w-full bg-white/95 rounded-2xl border-4 border-blue-200 py-16 px-4 md:px-16">
@@ -83,8 +91,8 @@ const About = () => {
         <p ref={greetFade} className="text-center text-emerald-500 text-lg mb-8 mt-8 transition-all duration-700 ease-out">
           Hi there👋 I'm glad you're here!
           <br/>This page is all about the fun side of me — the things I enjoy, the passions that keep me going, and what makes me <span className="font-bold">'me'</span>.
-          <br/>So if you’re wondering what kind of person I am outside of coding, you’re in the right place! 💫
-          <br/>Let’s jump in and explore together!
+          <br/>So if you're wondering what kind of person I am outside of coding, you're in the right place! 💫
+          <br/>Let's jump in and explore together!
         </p>
         
         <div className="mb-8">
@@ -163,7 +171,15 @@ const About = () => {
         </p>
 
         <div ref={buttonFade} className="text-center mt-8 transition-all duration-700 ease-out">
-          <Link to="/" className="btn-primary bg-blue-500 hover:bg-blue-600 text-white border-none">Back to Top</Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/" className="btn-primary bg-blue-500 hover:bg-blue-600 text-white border-none">Back to Top</Link>
+            <button 
+              onClick={navigateToContact}
+              className="btn-primary bg-emerald-500 hover:bg-emerald-600 text-white border-none"
+            >
+              Contact
+            </button>
+          </div>
         </div>
       </div>
     </section>

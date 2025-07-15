@@ -16,6 +16,11 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // ページ変更時に一番上にスクロール
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
+
   const navItems = [
     { name: 'Home', href: '#home', path: '/' },
     { name: 'Background', href: '#background', path: '/' },
@@ -29,7 +34,7 @@ const Header = () => {
     // 現在のページと異なるページに遷移する場合
     if (location.pathname !== path) {
       navigate(path)
-      // ページ遷移後にスクロール位置を設定
+      // メインページ内のセクションへのスクロールのみ処理
       setTimeout(() => {
         if (href.startsWith('#')) {
           const element = document.querySelector(href)

@@ -1,12 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 const Hello = () => {
+  const navigate = useNavigate()
+  const location = useLocation()
+
   const scrollToSection = (href) => {
     const element = document.querySelector(href)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
     }
+  }
+
+  const navigateToAbout = () => {
+    navigate('/about')
   }
 
   return (
@@ -41,8 +48,8 @@ const Hello = () => {
           {/* サブタイトル */}
           <p className="text-xl text-secondary-700 mb-8 max-w-2xl mx-auto animate-slide-up">
             Hello, My name is Toku! Thanks so much for visiting this site : )<br />
-            I’d love to share with you the projects I've worked on, the skills I've developed, and about who I am.<br />
-            Through this site, I hope you’ll get to know me better — not just as a developer, but as a person too.<br />
+            I'd love to share with you the projects I've worked on, the skills I've developed, and about who I am.<br />
+            Through this site, I hope you'll get to know me better — not just as a developer, but as a person too.<br />
             Feel free to explore and reach out anytime!
           </p>
 
@@ -54,12 +61,12 @@ const Hello = () => {
             >
               View My Projects
             </button>
-            <Link
-              to="/about"
+            <button
+              onClick={navigateToAbout}
               className="btn-secondary flex items-center justify-center"
             >
               About me
-            </Link>
+            </button>
           </div>
 
           {/* ソーシャルリンク */}
