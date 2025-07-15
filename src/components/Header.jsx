@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,22 +17,35 @@ const Header = () => {
   }, [])
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Profile', href: '#profile' },
-    { name: 'Background', href: '#background' },
-    { name: 'Works', href: '#works' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Home', href: '#home', path: '/' },
+    { name: 'Background', href: '#background', path: '/' },
+    { name: 'Projects', href: '#projects', path: '/' },
+    { name: 'Skills', href: '#skills', path: '/' },
+    { name: 'About', href: '/about', path: '/about' },
+    { name: 'Contact', href: '/contact', path: '/contact' },
   ]
 
-  const scrollToSection = (href) => {
-    if (href.startsWith('/')) {
-      window.location.href = href;
-      return;
-    }
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+  const scrollToSection = (href, path) => {
+    // 現在のページと異なるページに遷移する場合
+    if (location.pathname !== path) {
+      navigate(path)
+      // ページ遷移後にスクロール位置を設定
+      setTimeout(() => {
+        if (href.startsWith('#')) {
+          const element = document.querySelector(href)
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' })
+          }
+        }
+      }, 100)
+    } else {
+      // 同じページ内でのスクロール
+      if (href.startsWith('#')) {
+        const element = document.querySelector(href)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }
     }
     setIsMobileMenuOpen(false)
   }
@@ -52,7 +68,7 @@ const Header = () => {
             {navItems.map((item) => (
               <button
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => scrollToSection(item.href, item.path)}
                 className="text-secondary-700 hover:text-primary-600 font-medium transition-all duration-200 relative group"
               >
                 {item.name}
@@ -100,7 +116,7 @@ const Header = () => {
               {navItems.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => scrollToSection(item.href, item.path)}
                   className="block w-full text-left px-3 py-2 text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md font-medium transition-colors duration-200"
                 >
                   {item.name}
