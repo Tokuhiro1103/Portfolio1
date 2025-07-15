@@ -41,8 +41,8 @@ const ProjectApiDetail = () => (
 
       <div className="flex space-x-4 mt-6">
         
-        <a href="https://github.com/yourusername/project2" target="_blank" rel="noopener noreferrer" className="btn-secondary">GitHub (Web version)</a>
-        <a href="https://github.com/yourusername/project2" target="_blank" rel="noopener noreferrer" className="btn-secondary">GitHub (Mobile version)</a>
+        <a href="https://github.com/Tokuhiro1103/Playlist" target="_blank" rel="noopener noreferrer" className="btn-secondary">GitHub (Web version)</a>
+        <a href="https://github.com/Tokuhiro1103/Assignment3_mobile" target="_blank" rel="noopener noreferrer" className="btn-secondary">GitHub (Mobile version)</a>
       </div>
       <div className="mt-32 text-center">
         <Link to="/" className="btn-primary">Back to Projects</Link>

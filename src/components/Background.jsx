@@ -36,7 +36,7 @@ const Background = () => {
     {
       id: 2,
       school: 'Java Programming Job Training',
-      period: 'Jul 2022- Oct 2022',
+      period: 'Jul 2022 - Oct 2022',
       description: 'Bootcamp for Java programming by a Japanese public institution',
       achievements: [
         'Developed a web application with Java, JSP, Servlet, and MySQL',

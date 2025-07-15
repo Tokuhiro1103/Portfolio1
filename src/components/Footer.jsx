@@ -62,7 +62,7 @@ const Footer = () => {
               </p>
               <div className="flex space-x-4">
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/Tokuhiro1103"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-secondary-300 hover:text-white transition-all duration-200 hover:scale-110"
@@ -159,7 +159,7 @@ const Footer = () => {
                     href="mailto:your.email@example.com"
                     className="hover:text-white transition-colors duration-200"
                   >
-                    your.email@example.com
+                    tokuhirosakemi13@gmail.com
                   </a>
                 </li>
                 <li className="flex items-center space-x-3 group">

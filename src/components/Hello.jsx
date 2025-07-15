@@ -81,7 +81,7 @@ const Hello = () => {
           <div className="mt-12 flex justify-center space-x-6 animate-fade-in">
             {/* GitHub */}
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/Tokuhiro1103"
               target="_blank"
               rel="noopener noreferrer"
               className="text-secondary-600 hover:text-primary-600 transition-all duration-200 hover:scale-110"
