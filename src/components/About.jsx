@@ -7,17 +7,19 @@ const aboutSections = [
     description: `Back in my university days in Japan, I was part of a sailing club. \nSailing is my way to feel free and adventurous. Being a sailor has taught me teamwork, patience, and the beauty of nature.\nBut I wasn’t just out there riding the waves — I also got involved in team management and worked hard to recruit new members.\nAlso, I got a license to operate small boats!`,
     images: [
       'image_sailing1.jpg',
+      'image_sailing4.PNG',
       'image_sailing2.jpg',
       'image_sailing3.jpg',
+      'image_sailing5.JPG',
     ],
   },
   {
     title: 'GUITARIST',
     description: `Music has always been a big part of my life — and so has the guitar! \nA few years ago, some friends and I started a band club from scratch.\nWe didn’t just jam for fun — we formed bands, held live shows, and shared the stage with each other. It was all about good vibes, creativity, and the thrill of performing!`,
     images: [
-      'image_guitar1.jpg',
-      'image_guitar2.jpg',
-      'image_bass1.jpg',
+      'image_guitar3.png',
+      'image_guitar4.jpg',
+      'image_guitar5.png',
     ],
   },
   {

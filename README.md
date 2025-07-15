@@ -1,12 +1,47 @@
-# React + Vite
+# Toku's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a personal portfolio website built with **React**, **Vite**, and **Tailwind CSS**.
+It showcases my background, skills, projects, and provides a contact form for inquiries.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Responsive and modern UI/UX
+- Smooth navigation using React Router
+- Project detail pages with comprehensive descriptions
+- About page with gallery-style layout and creator introduction
+- Contact form integrated with EmailJS for direct messaging
+- Consistent navigation in Header and Footer
 
-## Expanding the ESLint configuration
+## Sections
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **About**: Introduction, photos, and background information
+- **Skills**: Technologies and tools I use
+- **Projects**: Portfolio of my works with detail pages and GitHub links
+- **Contact**: Email form for direct contact
+
+## Getting Started
+
+1. Clone this repository:
+   ```
+   git clone https://github.com/your-username/your-repo.git
+   ```
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Start the development server:
+   ```
+   npm run dev
+   ```
+
+## Technologies Used
+
+- React
+- Vite
+- Tailwind CSS
+- EmailJS
+- React Router
+
+## Contact
+
+Feel free to reach out via the contact form on the website or connect with me on [LinkedIn](https://www.linkedin.com/in/tokuhiro-sakemi-ba0772244).

@@ -58,7 +58,7 @@ const Footer = () => {
                 Toku
               </h3>
               <p className="text-secondary-300 mb-4 leading-relaxed">
-                A passionate IT student at QUT, dedicated to creating innovative web solutions and learning cutting-edge technologies.
+                An aspiring IT student at QUT from Japan, committed to building creative digital solutions and learning cutting-edge technologies.
               </p>
               <div className="flex space-x-4">
                 <a
