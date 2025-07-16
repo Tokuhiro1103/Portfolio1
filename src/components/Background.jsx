@@ -8,7 +8,7 @@ const Background = () => {
       company: 'DMM Boost',
       position: 'Customer Experience and Consultant',
       period: 'Mar 2023 - Nov 2023',
-      description: 'Worked as an implementation consultant for LINE Official Account extension tool as an common advertisement tool in Japan, and  a local SEO (MEO) support service',
+      description: 'Worked as an implementation consultant for LINE Official Account extension tool as an common advertisement tool in Japan, and  a local MEO support service',
     },
     {
       id: 2,
